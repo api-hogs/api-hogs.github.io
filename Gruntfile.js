@@ -105,6 +105,9 @@ module.exports = function(grunt) {
   grunt.registerTask('default', "Build (in debug mode) & test your application.", ['test']);
 
 
+  grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.registerTask('deploy', ['dist', 'createCnameForGithubPages', 'gh-pages']);
+
   // Servers
   // -------------------
   grunt.registerTask('server', "Run your server in development mode, auto-rebuilding when files change.", function(proxyMethod) {
@@ -250,6 +253,10 @@ module.exports = function(grunt) {
 
   grunt.registerTask('createResultDirectory', function() {
     grunt.file.mkdir('tmp/result');
+  });
+
+  grunt.registerTask('createCnameForGithubPages', function() {
+    grunt.file.write('dist/CNAME', 'api-hogs.io');
   });
 
   grunt.initConfig(config);
