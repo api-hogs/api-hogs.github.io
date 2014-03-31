@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>App</title>
+  <title>api-hogs.io</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- build:css(tmp/result) /assets/app.min.css -->
-  <link rel="stylesheet" href="/assets/app.css">
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/queries.css">
+    <link rel="stylesheet" href="/assets/app.css">
   <!-- endbuild -->
 
   <!-- for more details visit: https://github.com/yeoman/grunt-usemin -->
@@ -33,6 +39,7 @@
   <!-- build:js(tmp/result) /assets/vendor.min.js -->
 
     <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/modernizr/modernizr.js"></script>
 
     <!-- @if dist=false -->
     <script src="/vendor/handlebars/handlebars.js"></script>
@@ -57,11 +64,6 @@
   <!-- endbuild -->
 
   <!-- @if dist=false -->
-  <style>
-    @keyframes domChanged { from { background: yellow; } }
-    @-webkit-keyframes domChanged { from { background: yellow; } }
-    .ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
-  </style>
   <!-- @endif -->
   <!-- @if tests=true -->
   <script src="/vendor/ember-shim.js"></script>
@@ -89,7 +91,7 @@
   <!-- @endif -->
 
 </head>
-<body>
+<body class="under_construction">
   <!--[if lt IE 8]>
     <p class="browsehappy">
       You are using an <strong>outdated</strong> browser. Please
