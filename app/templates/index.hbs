@@ -1,29 +1,30 @@
-<div class="page_wrap">
-    <div class="main_wrap">
-        <header class="header2">
-            <div class="header_inner">
-
-                <div class="header_phone">
-                </div>
-
-            </div><!-- header1 -->
-        </header>
-
-        <div class="content_wrap">
-            <div class="content">
-            </div> <!--.content  -->
-            <aside>
-            </aside>
-        </div><!-- content-wrap -->
-
-    </div> <!-- main_wrap -->
-
-</div> <!-- page_wrap -->
-
-<footer>
-    <div class="footer">
-        <ul>
-            <li></li>
-        </ul>
+{{#view 'loop'}}
+    <div class="plax1"></div>
+    <div class="plax2"></div>
+    <div class="plax3"></div>
+    <div class="plax4"></div>
+{{/view}}
+{{#view 'project-wrap'}}
+    <div class="commits">
+        {{each controller.selectedProject.commits itemView='project-commit'}}
     </div>
-</footer>
+{{/view}}
+<div class="loader_wrap">
+    <div>
+        <div class="project_name"></div>
+        <div class="percent"></div>
+        <div class="bar"></div>
+    </div>
+</div>
+<div class="projects_menu">
+  {{each controller itemView='project-menu'}}
+</div>
+<div class="main_wrap">
+    <header></header>
+    <div class="content_wrap">
+        <div class="content">
+
+        </div>
+        <aside></aside>
+    </div><!--content_wrap-->
+</div> <!--main_wrap-->

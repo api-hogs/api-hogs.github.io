@@ -1,60 +1,92 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+* {
+    box-sizing:border-box; margin:0px; padding:0px;
+}
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
 @font-face {
-    font-family: 'ElektraLight';
-    src: url('../fonts/ElektraLight.eot');
-    src: local('☺'), url('../fonts/ElektraLight.woff') format('woff'), url('../fonts/ElektraLight.ttf') format('truetype'), url('../fonts/ElektraLight.svg') format('svg');
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.eot');
+    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/opensans-light-webfont.woff') format('woff'),
+    url('../fonts/opensans-light-webfont.ttf') format('truetype'),
+    url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-header, h1, h2, h3, h4, h5, .usr_name, form, .addr, .paginate
-{ font-family: 'ElektraLight', Helvetica, sans-serif}
+html, body {
+    height:100%;
+    font-size: 1em;
+    line-height: 1.4;
+}
+body {
+    min-width: 765px;
+    font-family: 'open_sanslight', Helvetica, sans-serif;
+    color: #202020;
+    background-image: url(/assets/images/bg.jpg);
+    background-size: cover;
+}
 
-html,button,input,select,textarea {    color: #222;}
-/*--width--*/
-aside, .fm_i, .simplesearch, .mainmenu, .side_filters_caption {
-    -webkit-transition: width .2s ease-out;
-    -moz-transition: width .2s ease-out;
-    -o-transition: width .2s ease-out;
-    transition: width .2s ease-out;}
-/*--margin--*/
-.content_wrap {
-    -webkit-transition: margin .2s ease-out;
-    -moz-transition: margin .2s ease-out;
-    -o-transition: margin .2s ease-out;
-    transition: margin .2s ease-out;
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
-/*--all--*/
-.sub1, .side_filter_list li a, .fm_i > p, .p_name, .mainmenu a  {
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
-/*--opacity--*/
-.bkmrk  {
-    -webkit-transition: opacity .2s ease-out;
-    -moz-transition: opacity .2s ease-out;
-    -o-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out;
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 /* ==========================================================================
    MAIN WRAPPERS
    ========================================================================== */
-html, body {
-    height:100%;
-}
-body {
-    min-width: 640px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #202020;
-    font-size: 14px;
-    line-height: 140%;
-}
+body > svg { position:absolute;}
 .main_wrap {
     min-width: 640px;
+    position:relative;
 }
+
 .page_wrap {
     min-height: 100%;
+    min-width:640px;
     padding-bottom: 160px;
 }
 .page_wrap:after, .main_wrap:after {
@@ -73,148 +105,249 @@ body {
 aside {
     float:left;
     position:relative;
-    width:250px;
-    margin-top: 310px;
+    width:0px;
     margin-left: -100%;
 }
-
 .content {
-    padding:0 0 10px 280px;
+    padding:0 0 10px 0px;
     width: 100%;
     float: left;
 }
 footer {
     position:relative;
-    height: 150px;
-    margin-top: -150px;
+    height: 160px;
+    margin-top: -160px;
     width: 100%;
-}
-.under_construction {
-    background:url(/assets/images/under_construction.jpg) 50% 0px no-repeat;}
-/*======================================  SIDEBAR  =============================*/
-.side_block {
-    margin: 10px 0;
+    background-image: url(/assets/images/ftr.png);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
-/* ==========================================================================
-   HEADER
-   ========================================================================== */
-.main_wrap > header {
-    width: 100%;
-    float:left;
+/*======================================  CONTENT  =============================*/
+
+
+/* =====================================   projects flow =================================== */
+.project_wrap {
+    position:absolute;
+    bottom:0px;
+    left: 0;
+    right: 0;
+    z-index:0;
+    height:0px;
+    overflow:hidden;}
+.commits { margin:0 auto;
+    width:45%;}
+.commit {
     position:relative;
-    z-index:10;
-    font-size:1em;
-    background-size:cover;}
-
-.header_inner {
-    z-index: 1;
-    max-width: 1224px;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
+    cursor:pointer;
+    width:97px;
+    height:110px;
+    clear:both;
+    background:url(/assets/images/commit.png) 0 0 no-repeat;
+    overflow:hidden;
 }
+.commit	g {
+    clip-path: url(#clipping);
+}
+.commit	.info { position:absolute;  top:0px; left:0px; color:#fff;
+    width:400px;
+    line-height:90%;
+    display:table;
+    vertical-align:middle;
+    padding-left:100px;
+    opacity:0;
+    transition: all .3s ease-out 0.2s;
+}
+.commit:hover { overflow:visible;}
+.commit:hover .info { opacity:1;}
+.commit	.info svg {
+    position:relative;
+    top: 9px;
+    left: 7px;
+    position:absolute;
+}
+.commit	.info svg + div {
+    display:table-cell; vertical-align:middle; height:110px;}
+.commit	.info svg + div	 div { border-bottom:#fff 1px solid; margin:0 0 5px -10px; padding:0 0 5px 10px;}
+.commit .date { text-align:center; width:97px;
+    line-height:210%;
+    padding-top:30px;
+    color:#add860;}
+.commit .date strong { font-size:50px; display:block;}
 
+.commit.p1 { margin:20px 0 20px 20px;}
+.commit.p2 { margin:20px 0 20px 120px;
+    float:right;}
+.commit.p3 { margin:20px 0 20px 70px;}
+.commit.p4 { margin:20px 100px 20px 20px;
+    float:right;}
+.commit.p5 { margin:20px 0 20px 220px;}
+.commit.p6 { margin:20px 0 20px 420px;}
 
-.logo {
+/*======================================  projects_menu  ============================*/
+.projects_menu { position:absolute;
+    right:10px;
+    top:44%;
+}
+.projects_menu span {
+    height: 18px;
+    min-width: 13px;
+    background:url(/assets/images/proj_menu.png) 0px 0px;
+    position:relative;
+    display: block;
+    font-size: 12px; color:#fff;
+    margin:3px 0;
+    padding:0 0 0 10px;
+    cursor:pointer;
+    float:right;
+    clear:both;
+}
+.projects_menu span	strong { width:0px; overflow:hidden;
     display:block;
-    background:url(../images/sprite.png);
-    background-position: 0 -60px;
-    width: 205px;
-    height:80px;
-    margin:80px 0 0 40px;
-    position: relative;
-    z-index: 10;
-    float:left;}
+    font-weight:normal;
+    transition: all .2s ease-in-out;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.projects_menu span:after {
+    content:'';
+    width:6px;
+    height:18px;
+    position:absolute;
+    top:0px;
+    background-image:url(/assets/images/proj_menu.png);
+}
+.projects_menu span:after { background-position:100% 0px; right:-6px;}
+.projects_menu span:hover:after, .projects_menu span.active:after { background-position:0px -20px; width:20px;}
+.projects_menu span:hover strong, .projects_menu span.active strong {
+    width:200px;
+    margin-right:20px;}
+/*======================================  LOADER  ============================ */
+.loader_wrap { position:absolute;
+    top:0px;
+    left:50%;
+    width:1px; height:1px;}
+.loader_wrap > div {
+    position:absolute;
+    top:20px; width:700px;
+    left:-350px;
+    height:5px;
+    border-radius: 3px;
+    box-shadow:1px 1px 3px rgba(0,0,0, .5) inset;
+}
+.loader_wrap > div:after {
+    content:'';
+    position:absolute;
+    top:0px; left:0px; right:0px; bottom:0px;
+    box-shadow:0px 0px 20px rgba(255,255,255, .9);
+}
+.loader_wrap .bar { background:#fff;
+    height:5px; border-radius:3px;
+    width:0%;}
+/*======================================  PARALLAX BG  ============================
+@-webkit-keyframes plax {
+	0% { background-position:50% 0%;}
+	100% {background-position:50% -1000px;}
+}
+@-moz-keyframes plax {
+	0% { background-position:50% 0%;}
+	100% {background-position:50% -1000px;}
+}
+@-o-keyframes plax {
+	0% { background-position:50% 0px;}
+	100% {background-position:50% -1000px;}
+}
+.plax > div {
+	position:absolute;
+	z-index:0;
+	top:0px; left:0px; right:0px; bottom:0px;
+	background-repeat: repeat-y;
+	transform: translateZ(0);
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	-o-animation-fill-mode: forwards;	
+	}
+.plax1 {
+	background-image:url(/assets/images/plax1.png);
+	-webkit-animation: plax 18s linear infinite;
+	-moz-animation: plax 18s linear infinite;
+	-o-animation: plax 18s linear infinite;
+	}
 
+.plax2 {
+	background-image:url(/assets/images/plax2.png);
+	-webkit-animation: plax 12s linear infinite;
+	-moz-animation: plax 12s linear infinite;
+	-o-animation: plax 12s linear infinite;
+	}
 
-/*======================================  FOOTER  =============================*/
-.footer {
-    max-width: 1224px;
-    margin: 0 auto;
-    padding: 110px 20px 0 20px;
-    color: #ff9289;
-    font-size: .9em;
+.plax3 {
+	background-image:url(/assets/images/plax3.png);
+	-webkit-animation: plax 9s linear infinite;
+	-moz-animation: plax 9s linear infinite;
+	-o-animation: plax 9s linear infinite;
+	}
+.plax4 {
+	background-image:url(/assets/images/plax4.png);
+	-webkit-animation: plax 7s linear infinite;
+	-moz-animation: plax 7s linear infinite;
+	-o-animation: plax 7s linear infinite;
+	}
+=*/
+.plax {
+    position:absolute;
+    z-index:0;
+    top:0px; left:0px; right:0px; bottom:0px;
+    overflow:hidden;}
+.plax > div {
+    position:absolute;
+    z-index:0;
+    top:0px; left:0px; right:0px;
+    height:4000px;
+    background-repeat: repeat-y;
+    background-position:50% 0px;
 }
-.footer .fl_l { padding: 4px}
-.footer ul {
-    float: right;
-}
-.footer li {
-    list-style-type: none;
-    display: inline-block;
-}
-.footer a { color: #ff9289;
-    display: block;
-    padding: 4px 8px;}
-
-a {
-    color:#b50e00;
-    text-decoration: none;
-    -webkit-transition: color .2s ease-out;
-    -moz-transition: color .2s ease-out;
-    -o-transition: color .2s ease-out;
-    transition: color .2s ease-out;}
-a:hover {
-    text-decoration: underline;}
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.plax1 {
+    background-image:url(/assets/images/plax1.png);
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+.plax2 {
+    background-image:url(/assets/images/plax2.png);
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+
+.plax3 {
+    background-image:url(/assets/images/plax3.png);
 }
-.fl_r { float:right !important}
-.fl_l { float:left !important}
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-audio,canvas,img,video {vertical-align: middle;}
-fieldset {border: 0; margin: 0; padding: 0;}
-textarea {resize: vertical;}
+.plax4 {
+    background-image:url(/assets/images/plax4.png);
+}
+
 
 
 
 /* ==========================================================================
-   Browse Happy prompt
+   Media Queries
    ========================================================================== */
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+
 }
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-/*
- * Image replacement
- */
-
 .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
-    /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
 
@@ -225,12 +358,11 @@ textarea {resize: vertical;}
     height: 150%;
 }
 
-/* * Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-/* * Hide only visually, but have it available for screenreaders: h5bp.com/v */
+
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -241,8 +373,7 @@ textarea {resize: vertical;}
     position: absolute;
     width: 1px;
 }
-/* * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p */
+
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -252,26 +383,88 @@ textarea {resize: vertical;}
     position: static;
     width: auto;
 }
-/* * Hide visually and from screenreaders, but maintain layout */
-.invisible {visibility: hidden;}
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
+.invisible {
+    visibility: hidden;
+}
+
 .clearfix:before,
 .clearfix:after {
-    content: ' '; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
-.clearfix:after {clear: both;}
-/* For IE 6/7 only  */
-.clearfix {    *zoom: 1;}
 
+.clearfix:after {
+    clear: both;
+}
 
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="date">
+    <strong>{{day}}</strong>
+    {{month}}
+    .
+    {{year}}
+</div>
+<div class="info">
+    <svg height="100" width="100">
+        <image clip-path="url(#hex)" {{bind-attr xlink:href=user_avatar}} height="100" width="100"/>
+    </svg>
+    <div>
+        <div> {{name}} {{title}}</div>
+        <span>{{date}}</span>
+    </div>
+</div>
