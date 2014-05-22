@@ -19,6 +19,7 @@ loopView = Ember.View.extend
 
   animate: (selector, speed) ->
     item = $(selector)
+    item.finish(true)
     item.css({right:0})
     item.animate({
       top: '-1000',

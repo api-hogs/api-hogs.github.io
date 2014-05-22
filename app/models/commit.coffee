@@ -3,16 +3,20 @@ commit = DS.Model.extend
   date:        DS.attr 'string'
   user_avatar: DS.attr 'string'
 
-  year:(->
-    @get('date').split(".")[2]
+  dateArray: (->
+    @get('date').split(".")
   ).property('date')
+
+  year:(->
+    @get('dateArray')[2]
+  ).property('dateArray')
 
   month:(->
-    @get('date').split(".")[1]
-  ).property('date')
+    @get('dateArray')[1]
+  ).property('dateArray')
 
   day:(->
-    @get('date').split(".")[0]
-  ).property('date')
+    @get('dateArray')[0]
+  ).property('dateArray')
 
 `export default commit`
