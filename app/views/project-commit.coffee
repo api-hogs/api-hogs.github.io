@@ -5,11 +5,7 @@ projectCommitView = Ember.View.extend
   templateName: 'project/commit'
 
   indexClass:(->
-    index = (@get('controller.selectedProject.commits') || []).indexOf(@get('context'))
-    if index < 6
-      index++
-    else
-      index = 1
+    index = (@get('controller.selectedProject.commits') || []).indexOf(@get('context')) % 6 + 1
     "p%@".fmt(index)
   ).property('controller.selectedProject.commits.@each', 'context')
 
