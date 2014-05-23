@@ -2,7 +2,7 @@
 module.exports = {
   basic: {
     options: {
-      parallel: 2,
+      parallel: 1,
       framework: 'qunit',
       port: (parseInt(process.env.PORT || 7358, 10) + 1),
       test_page: 'tmp/result/tests/index.html',
@@ -21,7 +21,7 @@ module.exports = {
   },
   browsers: {
     options: {
-      parallel: 8,
+      parallel: 1,
       framework: 'qunit',
       port: (parseInt(process.env.PORT || 7358, 10) + 1),
       test_page: 'tmp/result/tests/index.html',
