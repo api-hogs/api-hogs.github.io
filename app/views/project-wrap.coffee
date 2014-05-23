@@ -7,9 +7,9 @@ projectWrapView = Ember.View.extend
 
   initCommitsFlow: ->
     project_wrapH = $('.project_wrap').height()
-    commitsH = (@get('controller.selectedProject.commits.length') || 1)*130 + 2 * $(window).height()
+    commitsH = (@get('controller.selectedProject.commits.length') || 1)*130 + 3 * $(window).height()
     $('.project_wrap').animate({height: commitsH}, (commitsH - project_wrapH) * 5)
-    $('.loader_wrap .bar').animate({width: 700}, (commitsH - project_wrapH) * 5)
+    $('.loader_wrap .bar').animate({width: 700}, (commitsH - project_wrapH - 2 * $(window).height()) * 5)
 
   projectObserver:(->
     @clear()
