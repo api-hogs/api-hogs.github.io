@@ -1,5 +1,5 @@
 commit = DS.Model.extend
-  title:         DS.attr 'string'
+  message:         DS.attr 'string'
   date:          DS.attr 'string'
   author_avatar: DS.attr 'string'
 
