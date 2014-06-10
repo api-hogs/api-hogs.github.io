@@ -1,7 +1,8 @@
 commit = DS.Model.extend
-  message:         DS.attr 'string'
+  message:       DS.attr 'string'
   date:          DS.attr 'string'
   author_avatar: DS.attr 'string'
+  standard_date: DS.attr 'string'
 
   dateArray: (->
     @get('date').split(".")

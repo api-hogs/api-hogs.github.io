@@ -11,11 +11,11 @@ textarea {
 }
 @font-face {
     font-family: 'open_sanslight';
-    src: url('../fonts/opensans-light-webfont.eot');
-    src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/opensans-light-webfont.woff') format('woff'),
-    url('../fonts/opensans-light-webfont.ttf') format('truetype'),
-    url('../fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    src: url('/assets/fonts/opensans-light-webfont.eot');
+    src: url('/assets/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/opensans-light-webfont.woff') format('woff'),
+    url('/assets/fonts/opensans-light-webfont.ttf') format('truetype'),
+    url('/assets/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -112,6 +112,7 @@ aside {
     padding:0 0 10px 0px;
     width: 100%;
     float: left;
+    color:#fff;
 }
 footer {
     position:relative;
@@ -124,7 +125,67 @@ footer {
 }
 
 /*======================================  CONTENT  =============================*/
+.footer { width:60%;
+    margin:0 auto;
+    padding-top:40px;
+    min-width:600px;
+}
+.logo { background-image:url(/assets/images/logo.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:50%;
+    width:30%;
+    max-width:279px;
+    height:114px;
+    display:block; float:left;}
+.main_menu {
+    float:right; padding-top: 50px;}
+.main_menu li { list-style-type:none; display:inline-block;}
+.main_menu li a { display:block; padding:5px 10px; color:#333;
+    text-decoration: none;}
+.main_menu li.active a { color: #009eec;}
+.main_menu li a:hover { text-decoration:underline;}
 
+/* =============================== tags ========================================== */
+h1 {border-bottom: #b3d9e4 1px solid;
+    font-size:300%;}
+.content a { color:#fff;}
+.fl_l { float:left}
+.fl_r { float:right}
+.content img.fl_l { margin: 10px 10px 10px 0}
+.content img.fl_r { margin: 10px 0px 10px 10px}
+
+/* =============================== NEWS ========================================== */
+.news { text-decoration: none;border-bottom: #b3d9e4 1px solid;
+    display:block;
+    margin:0 0 20px 0;
+    padding-bottom:20px;
+    transition:color .2s ease-in-out;
+}
+.news:hover { color:#a2ecff;}
+.news_hdr { display:table; vertical-align:middle;}
+.news_hdr span, .news_hdr .news_title {  display:table-cell;}
+.news_hdr .news_title { font-size:190%; vertical-align:middle;
+    padding-left: 10px;}
+
+.news .fnt_small { display:block; font-size:90%;
+    margin:0 0 10px 64px;}
+.news_hdr span {
+    background:url(/assets/images/commit.png) 50% no-repeat;
+    background-size:contain;
+    width:52px;
+    height:54px;
+    color:#333;
+    text-align:center;
+    font-size:10px;
+    padding:0 3px;
+}
+.news_hdr span strong { display:block;
+    font-size:24px;
+    line-height:20px;
+    margin-top:9px;}
+.news_single_info { margin:-20px 0 10px 0;}
+.news_single_info span { display:block; float:left; margin:0 20px 0 0;}
 
 /* =====================================   projects flow =================================== */
 .project_wrap {
@@ -161,7 +222,6 @@ footer {
 .commit:hover { overflow:visible;}
 .commit:hover .info { opacity:1;}
 .commit	.info svg {
-    position:relative;
     top: 9px;
     left: 7px;
     position:absolute;
@@ -184,10 +244,99 @@ footer {
 .commit.p5 { margin:20px 0 20px 220px;}
 .commit.p6 { margin:20px 0 20px 420px;}
 
+/*======================================  TEAM  ============================*/
+.usr {position:relative;
+    cursor:pointer;
+    height:110px;
+    margin:0 0 45px 0;
+    clear:both;
+    background:url(/assets/images/commit.png) 0 0 no-repeat;}
+.usr .info { position:absolute;  top:0px; left:0px; color:#fff;
+    line-height:90%;
+    display:table;
+    vertical-align:middle;
+    padding-left:115px;}
+.usr .info svg {
+    top: 9px;
+    left: 7px;
+    position:absolute;
+}
+.usr .info span	{ display:block; clear:both; font-size:90%;}
+.usr h3 { font-size:160%; font-weight:normal;
+    margin: 35px 0 15px 0;
+    float:left;}
+.usr_socials {float: left;
+    margin: 19px 0 0 5px;}
+.usr_socials a {
+    display:block;
+    float:left;
+    width: 22px;
+    height:24px;
+    margin:0 3px;
+    background-image:url(/assets/images/socials.png);
+}
+.usr_fb { background-position:0px 0px}
+.usr_be { background-position:-30px 0px}
+.usr_gl { background-position:-60px 0px}
+.usr_tw { background-position:-90px 0px}
+.usr_in { background-position:-120px 0px}
+
+/*======================================  form  ============================*/
+.contacts { width:70%; margin:0 auto;}
+.field_row { margin:15px 0; vertical-align:middle;}
+.field_row label {width: 34%; display:inline-block; padding:0 1% 0 0;
+    font-size: 120%;
+    text-align:right;}
+.field_row input.input, .field_row textarea {
+    width:65.5%;
+    display: inline-block;
+    border:rgba(255,255,255, 0) 1px solid;
+    padding:0px 1%;
+    background: rgba(255,255,255, 0.5);
+    transition: all .2s ease-in-out;}
+.field_row input.input	{
+    position:relative;
+    height:36px;}
+.field_row input.input:focus, .field_row textarea:focus {border:#fff 1px solid;
+    outline:none;}
+button {
+    color:#fff;
+    background:#06adff;
+    border:none;
+    padding:0 10px;
+    vertical-align:middle;
+    height:36px;
+    font-size:120%;
+    transition:all .2s ease-in-out;	}
+button:hover {
+    background:#2dbaff;
+}
+.field_row button { float:right}
+.field_row input.required:before {
+    position:absolute;
+    top:10px;
+    content:'*';
+    font-size:36px;
+    color:#fff;
+}
+
+
+/*======================================  LOGOS  ============================*/
+.logos { vertical-align:middle;
+    line-height:100px;}
+.logos div {
+    display:inline-block; margin:20px;}
 /*======================================  projects_menu  ============================*/
 .projects_menu { position:absolute;
     right:10px;
-    top:44%;
+    top:35%;
+}
+.projects_menu > strong {
+    display:block;
+    color:#fff;
+    text-align:right;
+    font-weight:normal;
+    margin:0 20px 5px 0;
 }
 .projects_menu span {
     height: 18px;
@@ -220,10 +369,11 @@ footer {
 .projects_menu span:after { background-position:100% 0px; right:-6px;}
 .projects_menu span:hover:after, .projects_menu span.active:after { background-position:0px -20px; width:20px;}
 .projects_menu span:hover strong, .projects_menu span.active strong {
-    width:200px;
+    width:180px;
     margin-right:20px;}
 /*======================================  LOADER  ============================ */
 .loader_wrap { position:absolute;
+    z-index: 1000;
     top:0px;
     left:50%;
     width:1px; height:1px;}
@@ -244,6 +394,32 @@ footer {
 .loader_wrap .bar { background:#fff;
     height:5px; border-radius:3px;
     width:0%;}
+.loader_wrap.preloader {
+    top:50%;}
+.loader_wrap.preloader > div {
+    font-size:20px;
+}
+.loader_wrap .project_name {
+    margin-top: -30px;
+    float:left;}
+.loader_wrap .percent {
+    margin-top: -30px;
+    float:right;}
+.loader_wrap.preloader > div:before {
+    box-sizing:border-box;
+    height:100px;
+    width:800px;
+    position:absolute;
+    z-index:-1;
+    content:'';
+    top: -50px;
+    left: -50px;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .8);
+    background: rgba(255, 255, 255, .4);
+    border: rgba(255, 255, 255, .5) 1px solid;
+}
+
 /*======================================  PARALLAX BG  ============================
 @-webkit-keyframes plax {
 	0% { background-position:50% 0%;}
@@ -468,3 +644,34 @@ footer {
         page-break-after: avoid;
     }
 }
+/*===================== project_descr ============================*/
+.project_descr {
+    position: fixed;
+    color:#fff;
+    bottom: 70px;
+    display:none;
+    top: 10px;
+    width: 50%;
+    left: 25%;}
+.project_descr	> div { max-width:740px; width:100%; margin:0 auto;}
+
+.project_values div {
+    width:33%;
+    float:left;
+    padding:0 0 10px 30px;
+    position:relative;
+}
+.project_values div strong { color:#222;
+    font-size: 20px;}
+.project_values div:before {
+    background-image: url(/assets/images/icons.png);
+    content:'';
+    position:absolute;
+    top: 0px;
+    left:0px;
+    width:25px;
+    height:35px;
+}
+.commits_qty:before { background-position: 0px 7px;}
+.days_qty:before { background-position: 0px -63px;}
+.guys_qty:before { background-position: 5px -27px;}	
