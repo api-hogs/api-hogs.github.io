@@ -51,6 +51,8 @@ hr {
     padding: 0;
 }
 
+body > .ember-view:first-of-type { height:100%;}
+
 audio,
 canvas,
 img,
