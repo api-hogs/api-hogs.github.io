@@ -36,6 +36,11 @@
   {{each controller itemView='project-menu'}}
 </div>
 <div class="main_wrap">
+    {{#if controller.isLoading}}
+        <div class="fade">
+            <div class="spinner"></div>
+        </div>
+    {{/if}}
     <header></header>
     <div class="content_wrap">
         <div class="content">
