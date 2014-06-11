@@ -1,0 +1,25 @@
+<div class="page_wrap">
+    {{outlet}}
+</div>
+<footer>
+    <div class="footer">
+        <a href="#" class="logo"></a>
+        <ul class="main_menu">
+            <li>
+                {{#link-to 'index'}}Home{{/link-to}}
+            </li>
+            <li>
+                {{#link-to 'news'}}News{{/link-to}}
+            </li>
+            <li>
+                {{#link-to 'team'}}Team{{/link-to}}
+            </li>
+            <li>
+                {{#link-to 'technologies'}}Technologies{{/link-to}}
+            </li>
+            <li>
+                {{#link-to 'contacts'}}Contacts{{/link-to}}
+            </li>
+        </ul>
+    </div>
+</footer>

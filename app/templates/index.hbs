@@ -1,51 +1,55 @@
-{{#view 'loop'}}
-    <div class="plax1"></div>
-    <div class="plax2"></div>
-    <div class="plax3"></div>
-    <div class="plax4"></div>
-{{/view}}
-{{#view 'project-wrap'}}
-    <div class="commits">
-        {{each controller.selectedProject.commits itemView='project-commit'}}
-    </div>
-{{/view}}
-<div class="project_descr">
-  <div>
-    <h1>{{selectedProject.name}}</h1>
-    <div class="project_values">
-      <div class="commits_qty"><strong>{{selectedProject.commitsCount}}</strong> commits</div>
-      <div class="days_qty"><strong>{{selectedProject.daysSinceCreated}}</strong> days</div>
-    </div>
-    <div class=""><p>
-      {{#if selectedProject.description}}
-        {{selectedProject.description}}
-      {{else}}
-        There is no description for this project yet.
-      {{/if}}
-      </p></div>
-  </div>
-</div>
-<div class="loader_wrap">
-    <div>
-        <div class="project_name"></div>
-        <div class="percent"></div>
-        <div class="bar"></div>
-    </div>
-</div>
-<div class="projects_menu">
-  {{each controller itemView='project-menu'}}
-</div>
-<div class="main_wrap">
-    {{#if controller.isLoading}}
-        <div class="fade">
-            <div class="spinner"></div>
-        </div>
-    {{/if}}
-    <header></header>
-    <div class="content_wrap">
-        <div class="content">
 
+    {{#view 'loop'}}
+        <div class="plax1"></div>
+        <div class="plax2"></div>
+        <div class="plax3"></div>
+        <div class="plax4"></div>
+    {{/view}}
+    {{#view 'project-wrap'}}
+        <div class="commits">
+            {{each controller.selectedProject.commits itemView='project-commit'}}
         </div>
-        <aside></aside>
-    </div><!--content_wrap-->
-</div> <!--main_wrap-->
+    {{/view}}
+    <div class="project_descr">
+        <div>
+            <h1>{{selectedProject.name}}</h1>
+
+            <div class="project_values">
+                <div class="commits_qty"><strong>{{selectedProject.commitsCount}}</strong> commits</div>
+                <div class="days_qty"><strong>{{selectedProject.daysSinceCreated}}</strong> days</div>
+            </div>
+            <div class=""><p>
+                {{#if selectedProject.description}}
+                    {{selectedProject.description}}
+                {{else}}
+                    There is no description for this project yet.
+                {{/if}}
+            </p></div>
+        </div>
+    </div>
+    <div class="loader_wrap">
+        <div>
+            <div class="project_name"></div>
+            <div class="percent"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="projects_menu">
+        {{each controller itemView='project-menu'}}
+    </div>
+    <div class="main_wrap">
+        {{#if controller.isLoading}}
+            <div class="fade">
+                <div class="spinner"></div>
+            </div>
+        {{/if}}
+        <header></header>
+        <div class="content_wrap">
+            <div class="content">
+
+            </div>
+            <aside></aside>
+        </div>
+        <!--content_wrap-->
+    </div>
+    <!--main_wrap-->
