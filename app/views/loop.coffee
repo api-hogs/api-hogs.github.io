@@ -23,7 +23,10 @@ loopView = Ember.View.extend
     item.css({right:0})
     item.animate({
       top: '-1000',
-    }, speed, 'linear', => @get('queue').addObject({selector: selector, speed: speed}); return)
+    }, speed, 'linear', =>
+      @get('queue').addObject({selector: selector, speed: speed}) if @get('queue')
+      return
+    )
     item.css({top: '0'})
     return
 `export default loopView`

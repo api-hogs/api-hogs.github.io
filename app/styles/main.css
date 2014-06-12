@@ -24,6 +24,7 @@ html, body {
     font-size: 1em;
     line-height: 1.4;
 }
+body > div.ember-view:first-of-type { height:100%;}
 body {
     min-width: 765px;
     font-family: 'open_sanslight', Helvetica, sans-serif;
@@ -50,8 +51,6 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
-body > .ember-view:first-of-type { height:100%;}
 
 audio,
 canvas,
@@ -145,7 +144,7 @@ footer {
 .main_menu li { list-style-type:none; display:inline-block;}
 .main_menu li a { display:block; padding:5px 10px; color:#333;
     text-decoration: none;}
-.main_menu li.active a { color: #009eec;}
+.main_menu li.active a, .main_menu li a.active { color: #009eec;}
 .main_menu li a:hover { text-decoration:underline;}
 
 /* =============================== tags ========================================== */
