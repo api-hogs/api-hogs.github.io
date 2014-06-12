@@ -13,18 +13,19 @@
     <div class="project_descr">
         <div>
             <h1>{{selectedProject.name}}</h1>
-
-            <div class="project_values">
-                <div class="commits_qty"><strong>{{selectedProject.commitsCount}}</strong> commits</div>
-                <div class="days_qty"><strong>{{selectedProject.daysSinceCreated}}</strong> days</div>
-            </div>
-            <div class=""><p>
-                {{#if selectedProject.description}}
-                    {{selectedProject.description}}
-                {{else}}
-                    There is no description for this project yet.
-                {{/if}}
-            </p></div>
+            <h2>{{selectedProject.total_commits}} commits</h2>
+            {{!--<div class="project_values">--}}
+                {{!--<div class="commits_qty"><strong>{{selectedProject.total_commits}}</strong> commits</div>--}}
+                {{!--<div class="days_qty"><strong>{{selectedProject.daysSinceCreated}}</strong> days</div>--}}
+            {{!--</div>--}}
+            {{!--<div class=""><p>--}}
+                {{!--{{#if selectedProject.description}}--}}
+                    {{!--{{selectedProject.description}}--}}
+                {{!--{{else}}--}}
+                    {{!--There is no description for this project yet.--}}
+                {{!--{{/if}}--}}
+            {{!--</p>--}}
+            {{!--</div>--}}
         </div>
     </div>
     <div class="loader_wrap">

@@ -26,6 +26,7 @@ html, body {
 }
 body > div.ember-view:first-of-type { height:100%;}
 body {
+    background-attachment: fixed;
     min-width: 765px;
     font-family: 'open_sanslight', Helvetica, sans-serif;
     color: #202020;
@@ -422,55 +423,55 @@ button:hover {
 }
 
 /*======================================  PARALLAX BG  ============================
+=*/
 @-webkit-keyframes plax {
-	0% { background-position:50% 0%;}
-	100% {background-position:50% -1000px;}
+    0% { background-position:50% 0%;}
+    100% {background-position:50% -1000px;}
 }
 @-moz-keyframes plax {
-	0% { background-position:50% 0%;}
-	100% {background-position:50% -1000px;}
+    0% { background-position:50% 0%;}
+    100% {background-position:50% -1000px;}
 }
 @-o-keyframes plax {
-	0% { background-position:50% 0px;}
-	100% {background-position:50% -1000px;}
+    0% { background-position:50% 0px;}
+    100% {background-position:50% -1000px;}
 }
 .plax > div {
-	position:absolute;
-	z-index:0;
-	top:0px; left:0px; right:0px; bottom:0px;
-	background-repeat: repeat-y;
-	transform: translateZ(0);
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
-	-o-animation-fill-mode: forwards;	
-	}
+    position:absolute;
+    z-index:0;
+    top:0px; left:0px; right:0px; bottom:0px;
+    background-repeat: repeat-y;
+    transform: translateZ(0);
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+}
 .plax1 {
-	background-image:url(/assets/images/plax1.png);
-	-webkit-animation: plax 18s linear infinite;
-	-moz-animation: plax 18s linear infinite;
-	-o-animation: plax 18s linear infinite;
-	}
+    background-image:url(/assets/images/plax1.png);
+    -webkit-animation: plax 18s linear infinite;
+    -moz-animation: plax 18s linear infinite;
+    -o-animation: plax 18s linear infinite;
+}
 
 .plax2 {
-	background-image:url(/assets/images/plax2.png);
-	-webkit-animation: plax 12s linear infinite;
-	-moz-animation: plax 12s linear infinite;
-	-o-animation: plax 12s linear infinite;
-	}
+    background-image:url(/assets/images/plax2.png);
+    -webkit-animation: plax 12s linear infinite;
+    -moz-animation: plax 12s linear infinite;
+    -o-animation: plax 12s linear infinite;
+}
 
 .plax3 {
-	background-image:url(/assets/images/plax3.png);
-	-webkit-animation: plax 9s linear infinite;
-	-moz-animation: plax 9s linear infinite;
-	-o-animation: plax 9s linear infinite;
-	}
+    background-image:url(/assets/images/plax3.png);
+    -webkit-animation: plax 9s linear infinite;
+    -moz-animation: plax 9s linear infinite;
+    -o-animation: plax 9s linear infinite;
+}
 .plax4 {
-	background-image:url(/assets/images/plax4.png);
-	-webkit-animation: plax 7s linear infinite;
-	-moz-animation: plax 7s linear infinite;
-	-o-animation: plax 7s linear infinite;
-	}
-=*/
+    background-image:url(/assets/images/plax4.png);
+    -webkit-animation: plax 7s linear infinite;
+    -moz-animation: plax 7s linear infinite;
+    -o-animation: plax 7s linear infinite;
+}
 .plax {
     position:absolute;
     z-index:0;
