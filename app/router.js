@@ -4,7 +4,7 @@ Router.map(function() {
   this.route('index', {path: '/'});
   this.route('team');
 //  this.route('news');
-//  this.route('contacts');
+  this.route('contacts');
   this.route('technologies');
 });
 

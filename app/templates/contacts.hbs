@@ -5,14 +5,16 @@
             <div class="contacts">
                 <h1>Contacts</h1>
                 <form>
-                    <div class="field_row"><label>Ваше имя</label>
-                        <input type="text" class="input required"></div>
-                    <div class="field_row"><label>Ваш email</label>
-                        <input type="text" class="input required"></div>
-                    <div class="field_row"><label>Cообщение</label>
-                        <textarea cols="8" rows="6"></textarea></div>
-                    <div class="field_row"><button>Отправить сообщение</button></div>
-
+                    <div class="field_row"><label>Name</label>
+                        {{input type="text" class="input required" value=controller.name}}
+                    </div>
+                    <div class="field_row"><label>Email</label>
+                        {{input type="email" class="input required" value=controller.email}}
+                    </div>
+                    <div class="field_row"><label>Message</label>
+                        {{textarea cols="8" rows="6" value=controller.message}}
+                    </div>
+                    <div class="field_row"><button {{action 'send'}}>Send</button></div>
                 </form>
             </div>
 
