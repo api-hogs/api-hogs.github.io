@@ -6,6 +6,7 @@ Router.map(function() {
 //  this.route('news');
   this.route('contacts');
   this.route('technologies');
+  this.route("404", { path: "*path"});
 });
 
 export default Router;

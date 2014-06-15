@@ -26,12 +26,12 @@ html, body {
 }
 body > div.ember-view:first-of-type { height:100%;}
 body {
-    background-attachment: fixed;
     min-width: 765px;
     font-family: 'open_sanslight', Helvetica, sans-serif;
     color: #202020;
     background-image: url(/assets/images/bg.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 ::-moz-selection {
@@ -688,6 +688,9 @@ button:hover {
 
 .spinner::before { height: 2.9em; top: 1em; border-radius: 1em 1em 0 0; }
 .spinner::after { height: 1.25em; top: 50%; margin-top: -.625em; border-radius: 50%; }
+
+.p404 { background:url(/assets/images/404.png) 50% no-repeat;}
+.p500 { background:url(/assets/images/500.png) 50% no-repeat;}
 
 @-webkit-keyframes rotate {
     0% { -webkit-transform: rotate(0deg);}
