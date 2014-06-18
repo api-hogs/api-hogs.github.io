@@ -117,10 +117,14 @@ aside {
     color:#fff;
 }
 footer {
-    position:relative;
-    height: 160px;
+    /* position:relative;
     margin-top: -160px;
+    */
+    position:fixed;
+    bottom:0px;
+    height: 160px;
     width: 100%;
+    z-index:100;
     background-image: url(/assets/images/ftr.png);
     background-repeat: no-repeat;
     background-size:cover;
@@ -331,7 +335,7 @@ button:hover {
 /*======================================  projects_menu  ============================*/
 .projects_menu { position:absolute;
     right:10px;
-    top:35%;
+    top:25%;
 }
 .projects_menu > strong {
     display:block;
@@ -689,6 +693,11 @@ button:hover {
 .spinner::before { height: 2.9em; top: 1em; border-radius: 1em 1em 0 0; }
 .spinner::after { height: 1.25em; top: 50%; margin-top: -.625em; border-radius: 50%; }
 
+.p404, .p500 { position:fixed; z-index:-1;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:90px;}
 .p404 { background:url(/assets/images/404.png) 50% no-repeat;}
 .p500 { background:url(/assets/images/500.png) 50% no-repeat;}
 
