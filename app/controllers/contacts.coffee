@@ -4,7 +4,7 @@ contacts = Ember.Controller.extend
       return unless @get('email')
       return unless @get('name')
       return unless @get('message')
-      $.post 'http://api-hogs.io/api/v1/contacts', {email: @get('email'), message: @get('message'), name: @get('name')}, =>
+      $.post 'http://api.api-hogs.io/api/v1/contacts', {email: @get('email'), message: @get('message'), name: @get('name')}, =>
         @set('email', '')
         @set('name', '')
         @set('text', '')
