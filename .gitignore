@@ -10,6 +10,7 @@
 /vendor/*
 !/vendor/ember-shim.js
 !/vendor/qunit-shim.js
+!/vendor/jquery.xdomainrequest.min.js
 
 # misc
 /.sass-cache
